@@ -1,0 +1,370 @@
+// 1. What are the main features of ES6?
+	arrows - () => {}
+	classes - 
+	template strings - ` `
+	destructuring - is a new and cleaner way of getting or extracting values from an object or an array. 
+	default + rest + spread
+	let + const
+	iterators + for..of
+	promises
+	math + number + string + array + object APIs
+	modules - lets us split our code base to multiple files for more maintainability and this lets us avoid putting all of our code in one big file
+	module loaders
+	map + set + weakmap + weakset
+	tail calls
+	enhanced object literals
+	
+	generators
+	unicode
+	proxies
+	symbols
+	subclassable built-ins
+	binary and octal literals
+	reflect api
+	
+
+// 1. Variables:
+
+    // 1. What is hoisting?
+			general meaning of hoist - raise (something) by means of ropes and pulleys.
+			
+			Hoisting is a JavaScript mechanism where variables and function declarations 
+			are moved to the top of their scope before code execution.
+			
+			Hoisting is JavaScript's default behavior of moving all declarations to the top 
+			of the current scope (to the top of the current script or the current function).
+			
+    // 2. Why is hoisting useful?
+			One of the benefits of hoisting is that it enables us to call functions before they appear in the code.
+	
+    // 3. Where does hoisting not work?
+			JavaScript only hoists declarations, not initializations.
+			
+    // 4. What are the different scopes of variables?
+			JavaScript has two scopes – global and local. Any variable declared outside of a function belongs to the global scope
+			
+        //Block{}, global, local or functional or class based, lexical
+			A block scope is the area within if, switch conditions or for and while loops. 
+			Generally speaking, whenever you see {curly brackets}, it is a block
+			
+        //What is the difference between global and lexical scope?
+			Lexical scoping (sometimes known as static scoping ) is a convention used 
+			with many programming languages that sets the scope (range of functionality) 
+			of a variable so that it may only be called (referenced) from within the 
+			block of code in which it is defined.
+			
+			In a programming environment, the global scope is the scope that contains, and is visible in, all other scopes
+			
+        //global is lexical but lexical is not necessarily global
+
+// 2. Operators:
+    // 1. What is the difference between == and ===
+			== in JavaScript is used for comparing two variables, but it ignores the datatype of variable. 
+			
+			=== is used for comparing two variables, but this operator also checks datatype and compares two values
+			
+    // 2. What are the miscellaneous operators in js?
+			The conditional operator is the only ternary operator (three operands) in JavaScript and is sometimes actually called the ternary operator.
+			
+			typeof is a unary operator that is placed before its single operand, which can be of any type. 
+			Its value is a string that specifies the type of the operand
+        //
+    // 3. What is the difference between the rest and spread operator?
+			It can be used in two different ways; as a spread operator OR as a rest parameter .
+			
+			Rest parameter: collects all remaining elements into an array. 
+			
+			Spread operator: allows iterables( arrays / objects / strings ) 
+			to be expanded into single arguments/elements
+
+// 3. Decision making and loops:
+    // 1. What is the difference between for of and for in loop?
+			Both for..in and for..of are looping constructs which are used to iterate over data structures. 
+			
+			The only difference between them is the entities they iterate over: 
+			
+			for..in iterates over all enumerable property keys of an object. 
+			
+			for..of iterates over the values of an iterable object.
+        
+    // 2. When do we use default case in a switch?
+			The default case can be used for performing a task when none of the cases is true
+
+// 4. Arrays:
+    // 1. What is the difference between a single dimensional array and a multi-dimensional array?
+			The main difference between 1D and 2D array is that the 
+			1D array represents multiple data items as a list while 
+			2D array represents multiple data items as a table consisting of rows and columns
+			
+    // 2. What are the different ways of assigning to an array?
+			An array can be created using array literal or Array constructor syntax
+			
+			In JavaScript there are two main ways to declare a new object or a new array. 
+			One uses literal syntax whilst the other favours the more verbose method of calling the constructor. ... 
+			The object literal allows you to define attributes inline. You cannot do this with the constructor counterpart
+			
+    // 3. What are the main methods for arrays?
+			// Map, find, filter, reduce, (slice, splice, )
+			
+			basics:
+				push, unshift, pop, shift, splice
+			
+
+// 5. Strings:
+    // 1. What are the main string methods?
+        // trim, replace, split, indexOf, concat, slice, splice, substring, toUpperCase, toLowerCase
+		replace()	Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced
+		trim()	Removes whitespace from both ends of a string
+		split()	Splits a string into an array of substrings
+		indexOf()	Returns the position of the first found occurrence of a specified value in a string
+		concat()	Joins two or more strings, and returns a new joined strings
+		slice()	Extracts a part of a string and returns a new string
+		substring()	Extracts the characters from a string, between two specified indices
+		toLowerCase()	Converts a string to lowercase letters
+		toString()	Returns the value of a String object
+		toUpperCase()	Converts a string to uppercase letters
+		
+		charAt()	Returns the character at the specified index (position)
+		charCodeAt()	Returns the Unicode of the character at the specified index
+		endsWith()	Checks whether a string ends with specified string/characters
+		fromCharCode()	Converts Unicode values to characters
+		includes()	Checks whether a string contains the specified string/characters
+		lastIndexOf()	Returns the position of the last found occurrence of a specified value in a string
+		localeCompare()	Compares two strings in the current locale
+		match()	Searches a string for a match against a regular expression, and returns the matches
+		repeat()	Returns a new string with a specified number of copies of an existing string
+		search()	Searches a string for a specified value, or regular expression, and returns the position of the match
+		startsWith()	Checks whether a string begins with specified characters
+		substr()	Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
+		toLocaleLowerCase()	Converts a string to lowercase letters, according to the host's locale
+		toLocaleUpperCase()	Converts a string to uppercase letters, according to the host's locale
+		valueOf()	Returns the primitive value of a String object
+		
+// 6. Numbers:
+    // 1. What are the main number methods?
+        // isInteger
+		isInteger()	Checks whether a value is an integer
+		isNaN()	Checks whether a value is Number.NaN
+		toString()	Converts a number to a string
+		
+		isFinite()	Checks whether a value is a finite number
+		isSafeInteger()	Checks whether a value is a safe integer
+		toExponential(x)	Converts a number into an exponential notation
+		toFixed(x)	Formats a number with x numbers of digits after the decimal point
+		toLocaleString()	Converts a number into a string, based on the locale settings
+		toPrecision(x)	Formats a number to x length
+		valueOf()	Returns the primitive value of a number
+		
+// 7. Dates:
+    // 1. What are the main date methods?
+        //
+		getDate()	Returns the day of the month (from 1-31)
+		getDay()	Returns the day of the week (from 0-6)
+		getFullYear()	Returns the year
+		getHours()	Returns the hour (from 0-23)
+		getMilliseconds()	Returns the milliseconds (from 0-999)
+		getMinutes()	Returns the minutes (from 0-59)
+		getMonth()	Returns the month (from 0-11)
+		getSeconds()	Returns the seconds (from 0-59)
+		getTime()	Returns the number of milliseconds since midnight Jan 1 1970, and a specified date
+		getYear()	Deprecated. Use the getFullYear() method instead
+		now()	Returns the number of milliseconds since midnight Jan 1, 1970
+		
+		setDate()	Sets the day of the month of a date object
+		setFullYear()	Sets the year of a date object
+		setHours()	Sets the hour of a date object
+		setMilliseconds()	Sets the milliseconds of a date object
+		setMinutes()	Set the minutes of a date object
+		setMonth()	Sets the month of a date object
+		setSeconds()	Sets the seconds of a date object
+		setTime()	Sets a date to a specified number of milliseconds after/before January 1, 1970
+		setYear()	Deprecated. Use the setFullYear() method instead
+		
+		getTimezoneOffset()	Returns the time difference between UTC time and local time, in minutes
+		getUTCDate()	Returns the day of the month, according to universal time (from 1-31)
+		getUTCDay()	Returns the day of the week, according to universal time (from 0-6)
+		getUTCFullYear()	Returns the year, according to universal time
+		getUTCHours()	Returns the hour, according to universal time (from 0-23)
+		getUTCMilliseconds()	Returns the milliseconds, according to universal time (from 0-999)
+		getUTCMinutes()	Returns the minutes, according to universal time (from 0-59)
+		getUTCMonth()	Returns the month, according to universal time (from 0-11)
+		getUTCSeconds()	Returns the seconds, according to universal time (from 0-59)
+		parse()	Parses a date string and returns the number of milliseconds since January 1, 1970
+		setUTCDate()	Sets the day of the month of a date object, according to universal time
+		setUTCFullYear()	Sets the year of a date object, according to universal time
+		setUTCHours()	Sets the hour of a date object, according to universal time
+		setUTCMilliseconds()	Sets the milliseconds of a date object, according to universal time
+		setUTCMinutes()	Set the minutes of a date object, according to universal time
+		setUTCMonth()	Sets the month of a date object, according to universal time
+		setUTCSeconds()	Set the seconds of a date object, according to universal time
+		toDateString()	Converts the date portion of a Date object into a readable string
+		toGMTString()	Deprecated. Use the toUTCString() method instead
+		toISOString()	Returns the date as a string, using the ISO standard
+		toJSON()	Returns the date as a string, formatted as a JSON date
+		toLocaleDateString()	Returns the date portion of a Date object as a string, using locale conventions
+		toLocaleTimeString()	Returns the time portion of a Date object as a string, using locale conventions
+		toLocaleString()	Converts a Date object to a string, using locale conventions
+		toString()	Converts a Date object to a string
+		toTimeString()	Converts the time portion of a Date object to a string
+		toUTCString()	Converts a Date object to a string, according to universal time
+		UTC()	Returns the number of milliseconds in a date since midnight of January 1, 1970, according to UTC time
+		valueOf()	Returns the primitive value of a Date object
+
+// 8. Math:
+    // 1. What are the main Math methods?
+        // Math.random, Math.floor
+		random()	Returns a random number between 0 and 1
+		round(x)	Rounds x to the nearest integer
+		ceil(x)	Returns x, rounded upwards to the nearest integer
+		floor(x)	Returns x, rounded downwards to the nearest integer
+		
+		abs(x)	Returns the absolute value of x
+		acos(x)	Returns the arccosine of x, in radians
+		acosh(x)	Returns the hyperbolic arccosine of x
+		asin(x)	Returns the arcsine of x, in radians
+		asinh(x)	Returns the hyperbolic arcsine of x
+		atan(x)	Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians
+		atan2(y, x)	Returns the arctangent of the quotient of its arguments
+		atanh(x)	Returns the hyperbolic arctangent of x
+		cbrt(x)	Returns the cubic root of x
+		clz32(x)	Returns the number of leading zeros in a 32-bit binary representation of x
+		cos(x)	Returns the cosine of x (x is in radians)
+		cosh(x)	Returns the hyperbolic cosine of x
+		exp(x)	Returns the value of Ex
+		expm1(x)	Returns the value of Ex minus 1
+		fround(x)	Returns the nearest (32-bit single precision) float representation of a number
+		log(x)	Returns the natural logarithmof x
+		log10(x)	Returns the base-10 logarithm of x
+		log1p(x)	Returns the natural logarithm of 1 + x
+		log2(x)	Returns the base-2 logarithm of x
+		max(x, y, z, ..., n)	Returns the number with the highest value
+		min(x, y, z, ..., n)	Returns the number with the lowest value
+		pow(x, y)	Returns the value of x to the power of y
+		sign(x)	Returns the sign of a number (checks whether it is positive, negative or zero)
+		sin(x)	Returns the sine of x (x is in radians)
+		sinh(x)	Returns the hyperbolic sine of x
+		sqrt(x)	Returns the square root of x
+		tan(x)	Returns the tangent of an angle
+		tanh(x)	Returns the hyperbolic tangent of a number
+		trunc(x)	Returns the integer part of a number (x)
+
+// 9. Functions:
+    // 1. What are the different types of functions in ES6?
+        // Anonymous
+		Arrow Functions
+		Default Parameter Values
+		Function Rest Parameter
+		
+    // 2. What is the difference between a generic function and an anonymous function?
+			Named functions are useful for a good debugging experience, 
+			while anonymous functions provides context scoping for easier development. 
+			Arrow functions should only be used when functions act as data
+			
+    // 3. What is IIFE?
+			An immediately invoked function expression is a JavaScript programming language 
+			idiom which produces a lexical scope using JavaScript's function scoping.
+			
+    // 4. Why do we use IIFE?
+			An Immediately-invoked Function Expression (IIFE for friends) is a way to execute 
+			functions immediately, as soon as they are created. IIFEs are very useful because 
+			they don't pollute the global object, and they are a simple way to isolate variables declarations
+        
+    // 5. What is tail call optimization?
+			Tail code optimization takes a recursive function and generate an iterative 
+			function using “goto” internally, and then execute it. ... In other words, 
+			tail call optimization means that it is possible to call a function from another 
+			function without growing the call stack
+	
+    // 6. What is a recursive function?
+			In programming terms a recursive function can be defined as a routine that calls itself directly or indirectly.
+			
+    // 7. What is a lambda/=> function?
+			 They are simply expressions that create functions. ... In JavaScript pre-ES6 we have 
+			 function expressions which give us an anonymous function (a function without a name)
+			 
+    // 8. Why do we use lambda functions?
+			A lambda function is a simple, short, throwaway function which is designed to be created inline in code.
+    // 9. What is functional hoisting?
+			function definition hoisting only occurs for function declarations, not function expressions.
+			
+    // 10. What are generator functions?
+			Generators are a special class of functions that simplify the task of writing iterators.
+			A generator is a function that produces a sequence of results instead of a single value, 
+			i.e you generate ​a series of values.
+			
+    // 11. What are callback functions? (When and why do we use them?)
+			A Callback function is a function that is gonna get called at a later point in time.
+			
+			A callback is a function passed as an argument to another function
+			Where callbacks really shine are in asynchronous functions, where one 
+			function has to wait for another function (like waiting for a file to load).
+			
+    // 12. What are prototype functions?
+			The prototype is an object that is associated with every functions and objects by default in JavaScript, 
+			where function's prototype property is accessible and modifiable and object's prototype property (aka attribute) 
+			is not visible. ... Every function includes prototype object by default.
+
+// 10. Promises:
+    // 1. What are promises?
+			General meaning - a declaration or assurance that one will do a particular thing or that a particular thing will happen.
+			
+			A promise is an object that may produce a single value some time in the future : 
+			either a resolved value, or a reason that it's not resolved
+			
+    // 2. Why do we use promises?
+			Promises are used to handle asynchronous operations in JavaScript.
+				
+    // 3. When do we use promises?
+			They are easy to manage when dealing with multiple asynchronous operations 
+			where callbacks can create callback hell leading to unmanageable code.
+			
+    // 4. What are the different types of promise methods?
+        //Then, catch, resolve, reject, pending
+			all
+			allSettled
+			race
+			
+    // 5. Promise.race Promise.all
+			 The Promise.all ( iterable ) method returns a new promise object, that fulfils when all the promises passed or any first one is rejected.
+			 The Promise.race (iterable) is also takes an array of asynchronous job and return a promise object. 
+			 The promise will be resolved as soon as first resolve of reject happens.
+
+// 11. Async Await:
+    // 1. What are the keywords?
+			Async:
+			It simply allows us to write promises based code as if it was synchronous 
+			and it checks that we are not breaking the execution thread.
+			
+			Await:
+			Await function is used to wait for the promise. It could be used within the 
+			async block only. It makes the code wait until the promise returns a result. 
+			It only makes the async block wait.
+
+// 12. Closures:
+    // 1. What is closure?
+			A closure is a feature in JavaScript where an inner function has access to the outer (enclosing) 
+			function's variables — a scope chain. The closure has three scope chains: it has access to its 
+			own scope — variables defined between its curly brackets. it has access to the outer function's variables.
+
+// 13. Collections:
+    // 1. What are collections?
+			A collection is simply an object that groups multiple elements into a single unit.
+			
+    // 2. What are the different types of collections?
+			Map, Set
+			
+    // 3. What is the difference between a Map and Weakmap
+			1) A WeakMap accepts only objects as keys whereas a Map,in addition to objects, 
+				accepts primitive datatype such as strings, numbers etc.
+
+			2) WeakMap objects doesn't avert garbage collection if there are no 
+				references to the object which is acting like a key. Therefore there is no 
+				method to retrieve keys in WeakMap, whereas in Map there are methods 
+				such as Map.prototype.keys() to get the keys.
+
+			3) There is no size property exists in WeakMap.
+
+// 14. Proxies:
+		Proxy is an object in javascript which wraps an object or a function 
+		and monitors it via something called target.
+		
